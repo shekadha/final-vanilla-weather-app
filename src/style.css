@@ -1,0 +1,15 @@
+.container {
+  width: 50%;
+}
+.emoji {
+  font-size: 25px;
+}
+.temp {
+  font-size: 20px;
+}
+#cel-link {
+  text-decoration: none;
+}
+#fah-link {
+  text-decoration: none;
+}
