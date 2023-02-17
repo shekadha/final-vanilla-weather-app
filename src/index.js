@@ -46,6 +46,7 @@ function showtemp(response) {
   let iconElement = document.querySelector("#icon");
 
   tempElement.innerHTML = Math.round(response.data.main.temp);
+  celTemp = response.data.main.temp;
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -58,8 +59,43 @@ function showtemp(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "8402ccd9e55983fce71eeeaa1d2bd1fc";
-//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&units=metric`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=new york&units=metric`;
+function search(city) {
+  let apiKey = "8402ccd9e55983fce71eeeaa1d2bd1fc";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
+  //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=new york&units=metric`;
 
-axios.get(`${apiUrl}&appid=${apiKey}`).then(showtemp);
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(showtemp);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-city-input");
+  search(cityInputElement.value);
+}
+
+function showfarTemp(event) {
+  event.preventDefault();
+  let farTemp = (celTemp * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(farTemp);
+  celsiuslink.classList.remove("active");
+  farenlink.classList.add("active");
+}
+function showCelTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celTemp);
+  celsiuslink.classList.add("active");
+  farenlink.classList.remove("active");
+}
+
+let celTemp = null;
+
+let form = document.querySelector("#citysearch");
+form.addEventListener("submit", handleSubmit);
+
+let farenlink = document.querySelector("#faren-link");
+farenlink.addEventListener("click", showfarTemp);
+
+let celsiuslink = document.querySelector("#celsius-link");
+celsiuslink.addEventListener("click", showCelTemp);
+search("Isfahan");

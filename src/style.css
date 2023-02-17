@@ -24,6 +24,13 @@
   font-size: 16px;
   top: -25px;
 }
+#faren-link {
+  text-decoration: none;
+}
+
+#celsius-link {
+  text-decoration: none;
+}
 #city {
   font-size: 30px;
   font-weight: 400;
@@ -32,4 +39,17 @@
 }
 #description {
   text-transform: capitalize;
+}
+#icon {
+  position: relative;
+  top: -23px;
+  height: 100px;
+  width: 110px;
+}
+#Humidity {
+  margin-top: 10px;
+}
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
 }
