@@ -66,16 +66,20 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">
-                      <span class="temperature" id="temperature">19 °C </span>
+                      <span class="temperature" id="temperature"> </span>
+                      <span id="units"
+                        ><a href="#" id="celsius-link" class="active">°C</a>|
+                        <a href="#" id="faren-link">°F</a></span
+                      >
                     </h5>
                     <p class="card-text">
                       <br />
                       Humidity:
-                      <span id="Humidity">54 </span>
+                      <span id="Humidity"> </span>
                       %
                       <br />
-                      wind:
-                      <span id="wind-speed"> 11km/h </span>
+                      Wind:
+                      <span id="wind"></span> km/h
                     </p>
                     <p class="card-text">
                       <small class="text-muted">Last updated 3 mins ago</small>
@@ -92,12 +96,12 @@
               style="max-width: 18rem"
             >
               <div class="card-body">
-                <h5 class="card-title" id="city">Isfahan, Isfahan Province</h5>
+                <h5 class="card-title" id="city"></h5>
                 <p class="card-text">
-                  <span id="timee">Friday 14:00</span>
+                  Last updated: <span id="date"></span>
 
                   <br />
-                  <span id="description"> Partly Cloudy </span>
+                  <span id="description"></span>
                 </p>
               </div>
             </div>
@@ -153,6 +157,12 @@
           </div>
         </div>
       </div>
+      <a
+        href="https://github.com/shekadha/final-vanilla-weather-app"
+        target="_blank"
+        >Open source code</a
+      >
+      by Shekoufeh Adhami
     </div>
 
     <script src="src/index.js"></script>
