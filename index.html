@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="container mt-5">
-      <div class="card border-2 border-primary rounded-4">
+      <div class="card border-2 border-primary rounded-4" id="total">
         <div class="card-body mb-2">
           <form class="mt-3" id="citysearch">
             <div class="row">
@@ -37,6 +37,7 @@
                   type="submit"
                   value="Search"
                   class="btn text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 p-3 w-100"
+                  id="formm"
                 />
               </div>
             </div>
@@ -44,7 +45,7 @@
         </div>
 
         <div
-          class="row m-3 mt-0 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-4 p-3"
+          class="row m-3 mt-0 text-primary-emphasis bg-primary-subtle rounded-3 p-3"
         >
           <img src="" />
           <div class="col-6 s-2">
@@ -62,7 +63,7 @@
                     <h5 class="card-title mt-2">
                       <span class="temperature" id="temperature"> </span>
                       <span id="units"
-                        ><a href="#" id="celsius-link" class="active">°C</a>|
+                        ><a href="#" id="celsius-link" class="active">°C</a> |
                         <a href="#" id="faren-link">°F</a></span
                       >
                     </h5>
@@ -98,8 +99,8 @@
           </div>
 
           <div class="row mt-2 m-4">
-            <div class="col-2">
-              <p class="emoji">
+            <div class="col-2 bg-light-subtle mb-2">
+              <p class="emoji px-2">
                 Fri
                 <br />
                 ☁️
@@ -108,7 +109,7 @@
               </p>
             </div>
 
-            <div class="col-2">
+            <div class="col-2 bg-primary bg-opacity-10">
               <p class="emoji">
                 Sat
                 <br />
@@ -126,7 +127,7 @@
                 <span class="temp"> 9° -7° </span>
               </p>
             </div>
-            <div class="col-2">
+            <div class="col-sm-2 bg-primary bg-opacity-10">
               <p class="emoji">
                 Mon
                 <br />
@@ -135,7 +136,7 @@
                 <span class="temp"> 9° -3° </span>
               </p>
             </div>
-            <div class="col-2">
+            <div class="col-2" id="emoji">
               <p class="emoji">
                 Tue
                 <br />

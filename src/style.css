@@ -1,6 +1,12 @@
 .container {
   width: 50%;
 }
+#total {
+  background-color: rgba(108, 99, 255, 0.5);
+}
+#emoji {
+  background-color: rgba(108, 99, 255, 0.5);
+}
 .emoji {
   font-size: 25px;
 }
@@ -40,6 +46,9 @@
 #description {
   text-transform: capitalize;
 }
+#formm {
+  background-color: #6c63ff;
+}
 #icon {
   position: relative;
   top: -23px;
@@ -52,4 +61,13 @@
 .active {
   color: rgb(33, 33, 33);
   cursor: default;
+}
+#emoji {
+  border: rgb(255, 0, 43);
+  border-width: 2px;
+}
+body {
+  background-image: url("https://slm-assets.secondlife.com/assets/14823847/lightbox/-Sky-Wallpapers.jpg?1471481111");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
