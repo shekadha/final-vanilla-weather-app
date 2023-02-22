@@ -34,6 +34,11 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+function getForecast(coordinates) {
+  let apikey = "62231151ce343c4d68652e1617efc22f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apikey}&units=metic`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function showtemp(response) {
   console.log(response.data);
@@ -57,6 +62,34 @@ function showtemp(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
+}
+function displayForecast(response) {
+  console.log(response.data.daily);
+  let forecastElemet = document.querySelector("#forecast");
+
+  let forcastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun"];
+  days.forEach(function (day) {
+    forcastHTML =
+      forcastHTML +
+      `     <div class="col-2">
+                <div class="weather-forcast-date">${day}</div>
+
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt=""
+                  width="36"
+                />
+                <div class="weather-forcast-temp">
+                  <span class="weather-forcast-temp-max">18</span>
+                  <span class="weather-forcast-temp-max">12</span>
+                </div>
+              </div>
+            `;
+  });
+  forcastHTML = forcastHTML + `</div>`;
+  forecastElemet.innerHTML = forcastHTML;
 }
 
 function search(city) {

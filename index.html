@@ -16,7 +16,7 @@
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container mt-5">
+    <div class="container">
       <div class="card border-2 border-primary rounded-4" id="total">
         <div class="card-body mb-2">
           <form class="mt-3" id="citysearch">
@@ -97,55 +97,7 @@
               </div>
             </div>
           </div>
-
-          <div class="row mt-2 m-4">
-            <div class="col-2 bg-light-subtle mb-2">
-              <p class="emoji px-2">
-                Fri
-                <br />
-                ☁️
-                <br />
-                <span class="temp">9° -6°</span>
-              </p>
-            </div>
-
-            <div class="col-2 bg-primary bg-opacity-10">
-              <p class="emoji">
-                Sat
-                <br />
-                ☀️
-                <br />
-                <span class="temp"> 10° -7° </span>
-              </p>
-            </div>
-            <div class="col-2">
-              <p class="emoji">
-                Sun
-                <br />
-                ☀️
-                <br />
-                <span class="temp"> 9° -7° </span>
-              </p>
-            </div>
-            <div class="col-sm-2 bg-primary bg-opacity-10">
-              <p class="emoji">
-                Mon
-                <br />
-                ⛅️
-                <br />
-                <span class="temp"> 9° -3° </span>
-              </p>
-            </div>
-            <div class="col-2" id="emoji">
-              <p class="emoji">
-                Tue
-                <br />
-                🌧
-                <br />
-                <span class="temp"> 4° -2° </span>
-              </p>
-            </div>
-          </div>
+          <div class="weather-forcast" id="forecast"></div>
         </div>
       </div>
       <a

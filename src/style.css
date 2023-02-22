@@ -1,12 +1,15 @@
 .container {
+  margin-top: 140px;
   width: 50%;
 }
+
 #total {
-  background-color: rgba(108, 99, 255, 0.5);
+  background-color: rgba(253, 253, 253, 0.5);
 }
 #emoji {
   background-color: rgba(108, 99, 255, 0.5);
 }
+
 .emoji {
   font-size: 25px;
 }
@@ -70,4 +73,18 @@ body {
   background-image: url("https://slm-assets.secondlife.com/assets/14823847/lightbox/-Sky-Wallpapers.jpg?1471481111");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.weather-forcast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forcast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forcast-temp {
+  font-size: 13px;
+}
+.weather-forcast-temp-min {
+  opacity: 0.5;
 }
