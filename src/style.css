@@ -1,5 +1,5 @@
 .container {
-  margin-top: 140px;
+  margin-top: 100px;
   width: 50%;
 }
 
@@ -69,22 +69,29 @@
   border: rgb(255, 0, 43);
   border-width: 2px;
 }
-body {
-  background-image: url("https://slm-assets.secondlife.com/assets/14823847/lightbox/-Sky-Wallpapers.jpg?1471481111");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .weather-forcast {
   margin-top: 20px;
   text-align: center;
 }
 .weather-forcast-date {
-  font-size: 16px;
-  opacity: 0.5;
+  font-size: 18px;
 }
 .weather-forcast-temp {
-  font-size: 13px;
+  font-size: 15px;
 }
-.weather-forcast-temp-min {
-  opacity: 0.5;
+
+#eachforecast {
+  background-color: white;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.weather-forcast-temp-max {
+  font-weight: bold;
+}
+body {
+  background-image: url("https://slm-assets.secondlife.com/assets/14823847/lightbox/-Sky-Wallpapers.jpg?1471481111");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
