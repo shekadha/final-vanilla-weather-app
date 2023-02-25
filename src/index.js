@@ -41,7 +41,6 @@ function getForecast(coordinates) {
 }
 
 function showtemp(response) {
-  console.log(response.data);
   let tempElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
